@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Leaflet Civic Styling */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-civic-tooltip {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+}
+
+.leaflet-civic-tooltip::before {
+  border-top-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.custom-risk-marker {
+  background: transparent;
+  border: none;
+}
+
+.custom-sensor-icon {
+  background: transparent;
+  border: none;
+}
+
+.blocked-x-marker {
+  background: transparent;
+  border: none;
+}
+
+.nav-start-pin, .nav-end-pin, .origin-pin, .dest-pin {
+  background: transparent;
+  border: none;
+}
+
+/* Ensure Leaflet controls stay below sticky header modals */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 10 !important;
+}
+
+/* Vehicle Travel from FROM to TO animation */
+@keyframes vehicleTravel {
+  0% {
+    left: 4px;
+    opacity: 0.4;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 36px);
+    opacity: 0.4;
+  }
+}
+
+.animate-vehicle-travel {
+  animation: vehicleTravel 4s ease-in-out infinite;
+}
+
+/* Smooth pulsing wave effect */
+@keyframes waterPulse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-water-wave {
+  animation: waterPulse 2.5s ease-in-out infinite;
+}

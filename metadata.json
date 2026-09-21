@@ -1,0 +1,6 @@
+{
+  "name": "AQUAD4C1177",
+  "description": "Smart Urban Flood & Drainage Intelligence for Chennai",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
